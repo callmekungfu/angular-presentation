@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to Angular Optimization!
+  </h1>
+  <p>And Web App Performance Analysis</p>
+  <ng-container *ngFor="let user of users">
+    <div>
+      <h3>{{user.name.first}} {{user.name.last}}</h3>
+      <p>{{user.about}}</p>
+      <ul>
+        <li *ngFor="let f of user.friends" (click)="doSomething()">{{f.id}} - {{f.name}}</li>
+      </ul>
+    </div>
+    <hr />
+  </ng-container>
+  
+  
+</div>
+
+<router-outlet></router-outlet>
